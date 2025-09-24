@@ -1,4 +1,4 @@
 # Classify
 Classify - Academic Helper
 
-Under Maintainence [ WILL BE OUT SOON 
+Under Maintainence [ WILL BE OUT SOON ]
