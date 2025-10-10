@@ -73,8 +73,10 @@ const Navbar: React.FC = () => {
               </span>
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-4">
+            {/* Right side: nav links + actions */}
+            <div className="ml-auto hidden md:flex items-center gap-6">
+              {/* Desktop Navigation */}
+              <div className="flex items-center gap-4">
               {navLinks.map((link) => {
                 const Icon = link.icon;
                 return (
@@ -92,10 +94,10 @@ const Navbar: React.FC = () => {
                   </Link>
                 );
               })}
-            </div>
+              </div>
 
-            {/* Right side buttons */}
-            <div className="flex items-center space-x-4">
+              {/* Right side buttons */}
+              <div className="flex items-center space-x-4">
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
@@ -139,6 +141,7 @@ const Navbar: React.FC = () => {
                   </Link>
                 </div>
               )}
+              </div>
 
               {/* Mobile menu button */}
               <button
