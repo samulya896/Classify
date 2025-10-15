@@ -19,10 +19,13 @@ import Input from '../components/ui/Input';
 const PYQRepository: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSemester, setSelectedSemester] = useState('');
+  const [selectedSubject, setSelectedSubject] = useState('');
   const [selectedType, setSelectedType] = useState('');
   const [selectedYear, setSelectedYear] = useState('');
   const [sortBy, setSortBy] = useState('title');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+
+  const subjects = Array.from(new Set(mockPYQs.map(pyq => pyq.subject))).sort();
 
   const filteredPYQs = useMemo(() => {
     return mockPYQs
@@ -30,10 +33,11 @@ const PYQRepository: React.FC = () => {
         const matchesSearch = pyq.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                             pyq.subject.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesSemester = !selectedSemester || pyq.semester === selectedSemester;
+        const matchesSubject = !selectedSubject || pyq.subject === selectedSubject;
         const matchesType = !selectedType || pyq.type === selectedType;
         const matchesYear = !selectedYear || pyq.year.toString() === selectedYear;
         
-        return matchesSearch && matchesSemester && matchesType && matchesYear;
+        return matchesSearch && matchesSemester && matchesSubject && matchesType && matchesYear;
       })
       .sort((a, b) => {
         switch (sortBy) {
@@ -52,14 +56,21 @@ const PYQRepository: React.FC = () => {
   }, [searchTerm, selectedSemester, selectedType, selectedYear, sortBy]);
 
   const handleDownload = (pyq: any) => {
-    // Simulate download
-    alert(`Downloading: ${pyq.title}`);
+    if (!pyq.downloadUrl || pyq.downloadUrl === '#') {
+      alert(`File not available for: ${pyq.title}`);
+      return;
+    }
+    if (pyq.downloadUrl.includes('YOUR_FILE_ID')) {
+      alert('Replace YOUR_FILE_ID in mockData.ts with the actual Google Drive file ID.');
+      return;
+    }
+    window.location.assign(pyq.downloadUrl);
   };
 
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'midterm': return 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300';
-      case 'final': return 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300';
+      case 'end semester': return 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300';
       case 'practical': return 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300';
       default: return 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300';
     }
@@ -109,7 +120,7 @@ const PYQRepository: React.FC = () => {
           className="mb-8"
         >
           <Card className="p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-4">
               <div className="lg:col-span-2">
                 <Input
                   type="text"
@@ -120,6 +131,19 @@ const PYQRepository: React.FC = () => {
                 />
               </div>
               
+              <div>
+                <select
+                  value={selectedSubject}
+                  onChange={(e) => setSelectedSubject(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                >
+                  <option value="">All Subjects</option>
+                  {subjects.map(sub => (
+                    <option key={sub} value={sub}>{sub}</option>
+                  ))}
+                </select>
+              </div>
+
               <div>
                 <select
                   value={selectedSemester}

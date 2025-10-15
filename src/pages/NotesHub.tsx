@@ -38,7 +38,15 @@ const NotesHub: React.FC = () => {
   }, [searchTerm, selectedSemester, selectedSubject]);
 
   const handleDownload = (note: any) => {
-    alert(`Downloading: ${note.title}`);
+    if (!note.downloadUrl || note.downloadUrl === '#') {
+      alert(`File not available for: ${note.title}`);
+      return;
+    }
+    if (note.downloadUrl.includes('YOUR_FILE_ID')) {
+      alert('Replace YOUR_FILE_ID in mockData.ts with the actual Google Drive file ID.');
+      return;
+    }
+    window.location.assign(note.downloadUrl);
   };
 
   const handleUpload = () => {

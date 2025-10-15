@@ -13,7 +13,7 @@ export interface PYQ {
   subject: string;
   semester: string;
   year: number;
-  type: 'midterm' | 'final' | 'practical';
+  type: string;
   downloadUrl: string;
 }
 
