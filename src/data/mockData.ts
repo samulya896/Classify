@@ -34,8 +34,8 @@ export const mockPYQs: PYQ[] = [
     subject: 'Computer Organization and Architecture',                
     semester: '3',                          
     year: 2023,                             
-    type: 'end semester',                  
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID'
+    type: 'ct-all',                  
+    downloadUrl: 'https://drive.google.com/drive/folders/1qqQ5mvOZ1pLHfyYIGdqbds6X3HsYI_DN'
   },
   {
     id: '4',
