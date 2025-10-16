@@ -11,13 +11,11 @@ const SignUp: React.FC = () => {
     name: '',
     email: '',
     password: '',
-    confirmPassword: '',
     course: '',
     year: '',
     semester: ''
   });
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState(false);
   
@@ -41,9 +39,6 @@ const SignUp: React.FC = () => {
     if (!formData.name) newErrors.name = 'Name is required';
     if (!formData.email) newErrors.email = 'Email is required';
     if (!formData.password) newErrors.password = 'Password is required';
-    if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = 'Passwords do not match';
-    }
     if (!formData.course) newErrors.course = 'Course is required';
     if (!formData.year) newErrors.year = 'Year is required';
     if (!formData.semester) newErrors.semester = 'Semester is required';
@@ -53,18 +48,14 @@ const SignUp: React.FC = () => {
       setIsLoading(false);
       return;
     }
+    const success = await signup(formData as any);
+    setIsLoading(false);
 
-    // Simulate API call
-    setTimeout(() => {
-      const success = signup(formData);
-      setIsLoading(false);
-      
-      if (success) {
-        navigate('/dashboard');
-      } else {
-        setErrors({ general: 'Something went wrong. Please try again.' });
-      }
-    }, 1000);
+    if (success) {
+      navigate('/dashboard');
+    } else {
+      setErrors({ general: 'Something went wrong. Please try again.' });
+    }
   };
 
   return (
@@ -218,26 +209,6 @@ const SignUp: React.FC = () => {
               </button>
             </div>
 
-            <div className="relative">
-              <Input
-                type={showConfirmPassword ? 'text' : 'password'}
-                name="confirmPassword"
-                label="Confirm Password"
-                placeholder="Confirm your password"
-                value={formData.confirmPassword}
-                onChange={handleChange}
-                error={errors.confirmPassword}
-                icon={Lock}
-                required
-              />
-              <button
-                type="button"
-                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                className="absolute right-3 top-9 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-              >
-                {showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
-              </button>
-            </div>
 
             <div className="flex items-start">
               <input

@@ -3,8 +3,8 @@ import { User } from '../types';
 
 interface AuthContextType {
   user: User | null;
-  login: (email: string, password: string) => boolean;
-  signup: (userData: Omit<User, 'id'> & { password: string }) => boolean;
+  login: (email: string, password: string) => Promise<boolean>;
+  signup: (userData: Omit<User, 'id'> & { password: string }) => Promise<boolean>;
   logout: () => void;
   updateUser: (userData: Partial<User>) => void;
   isLoading: boolean;
@@ -23,54 +23,69 @@ export const useAuth = () => {
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const apiBaseUrl = (import.meta as any).env?.VITE_API_BASE_URL || 'http://localhost:8080';
 
   useEffect(() => {
     const storedUser = localStorage.getItem('college_helper_user');
+    const storedToken = localStorage.getItem('college_helper_token');
     if (storedUser) {
       setUser(JSON.parse(storedUser));
     }
+    // Optionally, we could validate token here by calling backend /auth/me
     setIsLoading(false);
   }, []);
 
-  const login = (email: string, password: string): boolean => {
-    // Mock authentication - in real app, this would call an API
-    if (email && password) {
-      const mockUser: User = {
-        id: '1',
-        name: 'John Doe',
-        email: email,
-        course: 'Computer Science',
-        year: '3',
-        semester: '6'
-      };
-      setUser(mockUser);
-      localStorage.setItem('college_helper_user', JSON.stringify(mockUser));
+  const login = async (email: string, password: string): Promise<boolean> => {
+    try {
+      const response = await fetch(`${apiBaseUrl}/api/auth/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+      if (!response.ok) return false;
+      const data = await response.json();
+      // expected: { token: string, user: User }
+      if (!data?.token || !data?.user) return false;
+      localStorage.setItem('college_helper_token', data.token);
+      localStorage.setItem('college_helper_user', JSON.stringify(data.user));
+      setUser(data.user as User);
       return true;
+    } catch (_) {
+      return false;
     }
-    return false;
   };
 
-  const signup = (userData: Omit<User, 'id'> & { password: string }): boolean => {
-    // Mock signup - in real app, this would call an API
-    if (userData.email && userData.password) {
-      const newUser: User = {
-        id: Date.now().toString(),
-        name: userData.name,
-        email: userData.email,
-        course: userData.course,
-        year: userData.year,
-        semester: userData.semester
-      };
-      setUser(newUser);
-      localStorage.setItem('college_helper_user', JSON.stringify(newUser));
+  const signup = async (userData: Omit<User, 'id'> & { password: string }): Promise<boolean> => {
+    try {
+      const response = await fetch(`${apiBaseUrl}/api/auth/signup`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: (userData as any).name,
+          email: (userData as any).email,
+          password: (userData as any).password,
+          course: (userData as any).course,
+          year: (userData as any).year,
+          semester: (userData as any).semester
+        })
+      });
+      if (!response.ok) return false;
+      const data = await response.json();
+      // expected: { token: string, user: User }
+      if (!data?.token || !data?.user) return false;
+      localStorage.setItem('college_helper_token', data.token);
+      localStorage.setItem('college_helper_user', JSON.stringify(data.user));
+      setUser(data.user as User);
       return true;
+    } catch (_) {
+      return false;
     }
-    return false;
   };
 
   const logout = () => {
     setUser(null);
     localStorage.removeItem('college_helper_user');
+    localStorage.removeItem('college_helper_token');
   };
 
   const updateUser = (userData: Partial<User>) => {

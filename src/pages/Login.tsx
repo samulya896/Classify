@@ -40,18 +40,14 @@ const Login: React.FC = () => {
       setIsLoading(false);
       return;
     }
+    const success = await login(formData.email, formData.password);
+    setIsLoading(false);
 
-    // Simulate API call
-    setTimeout(() => {
-      const success = login(formData.email, formData.password);
-      setIsLoading(false);
-      
-      if (success) {
-        navigate('/dashboard');
-      } else {
-        setErrors({ general: 'Invalid email or password' });
-      }
-    }, 1000);
+    if (success) {
+      navigate('/dashboard');
+    } else {
+      setErrors({ general: 'Invalid email or password' });
+    }
   };
 
   return (
