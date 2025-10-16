@@ -60,34 +60,54 @@ export const mockPYQs: PYQ[] = [
 export const mockNotes: Note[] = [
   {
     id: '1',
-    title: 'Complete DSA Notes',
+    title: 'DSA Handwritten Notes',
     subject: 'Data Structures',
     semester: '3',
-    uploadedBy: 'John Doe',
-    uploadDate: '2024-01-15',
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_6',
-    fileSize: '2.4 MB'
+    uploadedBy: 'Vansh',
+    uploadDate: '2024-10-16',
+    downloadUrl: 'https://drive.google.com/file/d/1aWdnDMxz6FY4yq7FXs3-_gVE1Tukofb2/view',
+    fileSize: '5.4 MB'
   },
   {
     id: '2',
-    title: 'DBMS Comprehensive Guide',
-    subject: 'Database Systems',
-    semester: '4',
-    uploadedBy: 'Jane Smith',
-    uploadDate: '2024-01-10',
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_7',
-    fileSize: '3.1 MB'
+    title: 'APP Handwritten Notes',
+    subject: 'Advanced Programming Practice',
+    semester: '3',
+    uploadedBy: 'Vansh',
+    uploadDate: '2024-10-16',
+    downloadUrl: 'https://drive.google.com/file/d/1IEIS1XWJ_6jSQgiuYqgi6eA0kKbqluSK/view',
+    fileSize: '10.0 MB'
   },
   {
     id: '3',
-    title: 'OS Concepts & Implementation',
+    title: 'Operating Systems Full Syllabus',
     subject: 'Operating Systems',
-    semester: '5',
-    uploadedBy: 'Mike Johnson',
-    uploadDate: '2024-01-05',
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_8',
-    fileSize: '4.2 MB'
-  }
+    semester: '3',
+    uploadedBy: 'Vansh',
+    uploadDate: '2025-10-16',
+    downloadUrl: 'https://drive.google.com/drive/folders/1n7VZmVD2M2T9sDfy4P0pZeFQjiWdWyxM',
+    fileSize: '20 MB'
+  },
+  {
+    id: '4',
+    title: 'OS Handwritten Notes',
+    subject: 'Operating Systems',
+    semester: '3',
+    uploadedBy: 'Amulya',
+    uploadDate: '2024-10-16',
+    downloadUrl: 'https://drive.google.com/drive/folders/1iTPtjfaj8H5EGcdy_KymedKiM9tEhMJS',
+    fileSize: '9.2 MB'
+  },
+  {
+    id: '5',
+    title: 'Integration Formula sheet',
+    subject: 'Transforms and Boundary Value Problems',
+    semester: '3',
+    uploadedBy: 'Vansh',
+    uploadDate: '2024-10-16',
+    downloadUrl: 'https://drive.google.com/file/d/1_vlBS0mtCu9fM1BQOMz-gvsyIu6ir_uo/view',
+    fileSize: '5.0 MB'
+  },
 ];
 
 export const mockExams: ExamEvent[] = [
@@ -171,7 +191,7 @@ export const mockImportantLinks: ImportantLink[] = [
     id: '4',
     title: 'Hostel Information',
     description: 'Accommodation details and services',
-    url: 'https://hostel.srmist.edu.in/',
+    url: 'https://www.srmist.edu.in/srm-hostels/',
     category: 'campus',
     icon: 'Home'
   },

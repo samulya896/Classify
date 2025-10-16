@@ -38,54 +38,7 @@ const ImportantLinks: React.FC = () => {
   // Extended mock data with more links
   const extendedLinks = [
     ...mockImportantLinks,
-    {
-      id: '5',
-      title: 'Student Email',
-      description: 'Access your official college email account',
-      url: '#',
-      category: 'academic' as const,
-      icon: 'Mail'
-    },
-    {
-      id: '6',
-      title: 'Course Catalog',
-      description: 'Browse available courses and their descriptions',
-      url: '#',
-      category: 'academic' as const,
-      icon: 'BookOpen'
-    },
-    {
-      id: '7',
-      title: 'Academic Calendar',
-      description: 'Important academic dates and deadlines',
-      url: '#',
-      category: 'academic' as const,
-      icon: 'Calendar'
-    },
-    {
-      id: '8',
-      title: 'Emergency Contacts',
-      description: 'Important phone numbers for emergencies',
-      url: '#',
-      category: 'campus' as const,
-      icon: 'Phone'
-    },
-    {
-      id: '9',
-      title: 'Student Clubs',
-      description: 'Join various clubs and organizations',
-      url: '#',
-      category: 'campus' as const,
-      icon: 'Users'
-    },
-    {
-      id: '10',
-      title: 'Online Learning Portal',
-      description: 'Access online courses and materials',
-      url: '#',
-      category: 'resources' as const,
-      icon: 'Globe'
-    }
+    
   ];
 
   const filteredLinks = extendedLinks.filter(link => {
