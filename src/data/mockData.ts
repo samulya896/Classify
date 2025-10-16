@@ -8,7 +8,7 @@ export const mockPYQs: PYQ[] = [
     semester: '3',
     year: 2023,
     type: 'end semester',
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_1'
+    downloadUrl: 'https://drive.google.com/drive/folders/1teXP8p4jzzXHp35Z6Wy8HAn4tvckpLvS'
   },
   {
     id: '2',
@@ -17,7 +17,7 @@ export const mockPYQs: PYQ[] = [
     semester: '3',
     year: 2023,
     type: 'end semester',
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2'
+    downloadUrl: 'https://drive.google.com/file/d/1JbsMpAnBDBAuqvyendtizPJo89LktUkx/view?usp=sharing'
   },
   {
     id: '3',
