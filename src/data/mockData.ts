@@ -93,21 +93,21 @@ export const mockNotes: Note[] = [
 export const mockExams: ExamEvent[] = [
   {
     id: '1',
-    title: 'Data Structures Midterm',
-    subject: 'Data Structures',
-    date: '2024-02-15',
+    title: 'APP PROJECT REVIEW',
+    subject: 'Advanced Programming Practice',
+    date: '2025-10-16',
     time: '10:00 AM',
-    type: 'midterm',
-    room: 'Room 101'
+    type: 'practical',
+    room: 'Room 506'
   },
   {
     id: '2',
-    title: 'Database Systems Final',
-    subject: 'Database Systems',
-    date: '2024-02-20',
+    title: 'COA CT-2',
+    subject: 'Computer Organization and Architecture',
+    date: '2025-10-15',
     time: '2:00 PM',
-    type: 'final',
-    room: 'Room 205'
+    type: 'midterm',
+    room: 'Room 506'
   },
   {
     id: '3',
@@ -123,11 +123,11 @@ export const mockExams: ExamEvent[] = [
 export const mockEvents: Event[] = [
   {
     id: '1',
-    title: 'Tech Fest 2024',
-    description: 'Annual technology festival with coding competitions and workshops',
-    date: '2024-03-01',
+    title: 'Aaruush 2025',
+    description: 'National Level Techno-Management Fest 2025',
+    date: '2025-09-10',
     time: '9:00 AM',
-    location: 'Main Auditorium',
+    location: 'TP Ganeshan Auditorium',
     type: 'fest'
   },
   {
