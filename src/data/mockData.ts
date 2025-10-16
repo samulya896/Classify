@@ -134,16 +134,16 @@ export const mockEvents: Event[] = [
     id: '2',
     title: 'React Workshop',
     description: 'Learn modern React development techniques',
-    date: '2024-02-18',
+    date: '2024-10-18',
     time: '2:00 PM',
-    location: 'Computer Lab',
+    location: 'Imac Lab',
     type: 'workshop'
   },
   {
     id: '3',
-    title: 'Assignment Submission Deadline',
-    description: 'Final deadline for Software Engineering project',
-    date: '2024-02-12',
+    title: 'Portfolio submission deadline',
+    description: 'Final deadline for APP portfolio submission',
+    date: '2024-10-16',
     time: '11:59 PM',
     location: 'Online',
     type: 'deadline'
@@ -155,7 +155,7 @@ export const mockImportantLinks: ImportantLink[] = [
     id: '1',
     title: 'Student Portal',
     description: 'Access grades, transcripts, and academic records',
-    url: '#',
+    url: 'https://sp.srmist.edu.in/',
     category: 'academic',
     icon: 'GraduationCap'
   },
@@ -163,24 +163,32 @@ export const mockImportantLinks: ImportantLink[] = [
     id: '2',
     title: 'Library Portal',
     description: 'Search books, journals, and digital resources',
-    url: '#',
+    url: 'https://library.srmist.edu.in/univlib/',
     category: 'resources',
     icon: 'Library'
-  },
-  {
-    id: '3',
-    title: 'Campus Map',
-    description: 'Interactive map of the campus facilities',
-    url: '#',
-    category: 'campus',
-    icon: 'Map'
   },
   {
     id: '4',
     title: 'Hostel Information',
     description: 'Accommodation details and services',
-    url: '#',
+    url: 'https://hostel.srmist.edu.in/',
     category: 'campus',
     icon: 'Home'
-  }
+  },
+  {
+    id: '5',
+    title: 'Elab',
+    description: 'Elab is a auto evaluation tool for learning programming',
+    url: 'https://dld.srmist.edu.in/ktretelab2024/#/',
+    category: 'academic',
+    icon: 'Code'
+  },
+  {
+    id: '6',
+    title: 'eCurricula',
+    description: 'Provides centralized access to high quality educational resources',
+    url: 'https://dld.srmist.edu.in/ktretecurricula2024/#/ktretecurricula2024/',
+    category: 'academic',
+    icon: 'Code'
+  },
 ];
