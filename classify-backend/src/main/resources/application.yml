@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/classifydb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: classify
+    password: StrongPassword123!
+  sql:
+    init:
+      mode: never
+      platform: mysql
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+app:
+  jwt:
+    # For development only. Use a secure random 32+ byte secret in production (set via env var).
+    # This value is 32 characters (32 bytes) to meet HS256 minimum key size (>=256 bits).
+    secret: 01234567890123456789012345678901
+    expirationSeconds: 2592000 # 30 days
