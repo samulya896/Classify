@@ -130,3 +130,7 @@ desktop.ini
 *.orig
 *.rej
 
+# Local sensitive files (keep out of version control)
+/src/main/resources/application.yml
+/signup.json
+
