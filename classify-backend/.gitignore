@@ -1,8 +1,8 @@
-HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+# Keep repository documentation tracked (don't ignore HELP.md)
 
 ### STS ###
 .apt_generated
@@ -79,8 +79,6 @@ coverage/
 /out/
 
 ### Package and Dependencies ###
-package-lock.json
-yarn.lock
 *.jar
 *.war
 *.nar
@@ -88,6 +86,9 @@ yarn.lock
 *.zip
 *.tar.gz
 *.rar
+# package-lock and yarn.lock are usually tracked even for multi-repo setups; if you
+# want to ignore frontend lockfiles here, move them to the top-level .gitignore.
+
 
 ### Temporary Files ###
 tmp/
@@ -98,3 +99,34 @@ temp/
 *.bak
 *.swp
 *~.nib
+
+### Backend / Server specific ###
+# JVM crash logs
+hs_err_pid*.log
+
+# Maven local override files and settings created by some IDEs or CI
+.mvn/taskname
+.mvn/jvm.config
+local.properties
+
+# JaCoCo coverage reports
+jacoco.exec
+target/site/jacoco/
+
+# Docker overrides and local compose files
+docker-compose.override.yml
+.dockerignore
+
+# SSL certs and keys
+*.pem
+*.key
+*.crt
+certs/
+
+# Windows Explorer metadata
+desktop.ini
+
+# Backup of configuration files
+*.orig
+*.rej
+
