@@ -55,6 +55,15 @@ export const mockPYQs: PYQ[] = [
     type: 'final',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_5'
   }
+  {
+    id: '7',
+    title: 'Calculus and Linear Algebra',
+    subject: 'Calculus and Linear Algebra',
+    semester: '1',
+    year: 2024,
+    type: 'CT-1',
+    downloadUrl: 'https://drive.google.com/drive/folders/1ip_gN8-5k_lhNuDAnwShcwJPVxrWMG0M?usp=sharing'
+  }
 ];
 
 export const mockNotes: Note[] = [
