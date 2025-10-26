@@ -54,7 +54,7 @@ export const mockPYQs: PYQ[] = [
     year: 2022,
     type: 'final',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_5'
-  }
+  },
   {
     id: '7',
     title: 'Calculus and Linear Algebra',
@@ -63,7 +63,36 @@ export const mockPYQs: PYQ[] = [
     year: 2024,
     type: 'CT-1',
     downloadUrl: 'https://drive.google.com/drive/folders/1ip_gN8-5k_lhNuDAnwShcwJPVxrWMG0M?usp=sharing'
+  },
+  {
+    id: '8',
+    title: 'Chemistry',
+    subject: 'Chemistry',
+    semester: '1',
+    year: 2024,
+    type: 'CT-1',
+    downloadUrl: 'https://drive.google.com/drive/folders/1gZND3Bot3g5DKQFl7augCqZfX_qBQUyx?usp=sharing'
+  },
+  {
+    id: '9',
+    title: 'Chemistry',
+    subject: 'Chemistry',
+    semester: '1',
+    year: 2024,
+    type: 'CT-2',
+    downloadUrl: 'https://drive.google.com/drive/folders/1Sh57xw4vjhhI1TlMDuzaZ485N185ttpt?usp=sharing'
+  },
+  {
+    id: '10',
+    title: 'Programming For Problem Solving',
+    subject: 'Programming For Problem Solving',
+    semester: '1',
+    year: 2024,
+    type: 'CT-1',
+    downloadUrl: 'https://drive.google.com/drive/folders/1Br_431Udmj9UFKJ7r5mAZoa3xKkgQNfT?usp=sharing'
   }
+
+
 ];
 
 export const mockNotes: Note[] = [
