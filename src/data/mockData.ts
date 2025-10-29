@@ -190,6 +190,16 @@ export const mockNotes: Note[] = [
     downloadUrl: 'https://drive.google.com/file/d/1_vlBS0mtCu9fM1BQOMz-gvsyIu6ir_uo/view',
     fileSize: '5.0 MB'
   },
+  {
+    id: '6',
+    title: 'Unit 1 oodp',
+    subject: 'Object Oriented Design and Programming',
+    semester: '2',
+    uploadedBy: 'Daksh',
+    uploadDate: '2024-10-29',
+    downloadUrl: 'https://drive.google.com/file/d/1-S-N6nJsmWdKBTMZYekSHYMTUxjmEG-z/view?usp=share_link',
+    fileSize: '4.0 MB'
+  },
 ];
 
 export const mockExams: ExamEvent[] = [
