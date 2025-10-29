@@ -54,6 +54,12 @@ export const mockPYQs: PYQ[] = [
     year: 2023,
     type: 'Question Bank',
     downloadUrl: 'https://drive.google.com/file/d/19kaUScD7eNuzqWY951GKrvNpVEmpBeZB/view?usp=sharing'
+    title: 'Software Engineering',
+    subject: 'Software Engineering',
+    semester: '7',
+    year: 2022,
+    type: 'final',
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_5'
   },
   {
     id: '7',
@@ -68,6 +74,7 @@ export const mockPYQs: PYQ[] = [
     id: '8',
     title: 'Chemistry',
     subject: '21CYB101J',
+    subject: 'Chemistry',
     semester: '1',
     year: 2024,
     type: 'CT-1',
@@ -77,6 +84,7 @@ export const mockPYQs: PYQ[] = [
     id: '9',
     title: 'Chemistry',
     subject: '21CYB101J',
+    subject: 'Chemistry',
     semester: '1',
     year: 2024,
     type: 'CT-2',
@@ -86,6 +94,7 @@ export const mockPYQs: PYQ[] = [
     id: '10',
     title: 'Programming For Problem Solving',
     subject: '21CSS101J',
+    subject: 'Programming For Problem Solving',
     semester: '1',
     year: 2024,
     type: 'CT-1',
@@ -95,6 +104,7 @@ export const mockPYQs: PYQ[] = [
     id: '11',
     title: 'Advanced Calculus and Complex Analysis',
     subject: '21MAB102T',
+    subject: 'Advanced Calculus and Complex Analysis',
     semester: '2',
     year: 2024,
     type: 'CT-1',
@@ -104,6 +114,7 @@ export const mockPYQs: PYQ[] = [
     id: '12',
     title: 'Advanced Calculus and Complex Analysis',
     subject: '21MAB102T',
+    subject: 'Advanced Calculus and Complex Analysis',
     semester: '2',
     year: 2023,
     type: 'end semester',
@@ -113,6 +124,7 @@ export const mockPYQs: PYQ[] = [
     id: '13',
     title: 'Communicative English',
     subject: '21LEH101T',
+    subject: 'Communicaative English',
     semester: '2',
     year: 2023,
     type: 'CT Papers',
@@ -122,6 +134,7 @@ export const mockPYQs: PYQ[] = [
     id: '14',
     title: 'Object Oriented Design and Programming',
     subject: '21CSC101T',
+    subject: 'Object Oriented Design and Programming',
     semester: '2',
     year: 2023,
     type: 'end semester',
@@ -144,7 +157,13 @@ export const mockPYQs: PYQ[] = [
     year: 2023,
     type: 'end semester',
     downloadUrl: 'https://drive.google.com/drive/folders/1dVmykmHu9n4C_MEemz9tIM0PEpJG_di1?usp=sharing'
+    subject: 'Electrical and Electronics Engineering',
+    semester: '2',
+    year: 2023,
+    type: 'endsem PYQs',
+    downloadUrl: 'https://drive.google.com/drive/folders/1Arg4M6W0bgrDqYUOKvK8j46PBpCFHTwU?usp=sharing'
   }
+
 ];
 
 export const mockNotes: Note[] = [
@@ -210,6 +229,14 @@ export const mockNotes: Note[] = [
   },
 
   
+    title: 'Unit 1 oodp',
+    subject: 'Object Oriented Design and Programming',
+    semester: '2',
+    uploadedBy: 'Daksh',
+    uploadDate: '2024-10-29',
+    downloadUrl: 'https://drive.google.com/file/d/1-S-N6nJsmWdKBTMZYekSHYMTUxjmEG-z/view?usp=share_link',
+    fileSize: '4.0 MB'
+  },
 ];
 
 export const mockExams: ExamEvent[] = [
