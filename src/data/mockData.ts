@@ -3,8 +3,8 @@ import { PYQ, Note, ExamEvent, Event, ImportantLink } from '../types';
 export const mockPYQs: PYQ[] = [
   {
     id: '1',
-    title: 'Data Structures ',
-    subject: 'Data Structures',
+    title: 'Data Structures and Algorithms',
+    subject: '21CSC201J',
     semester: '3',
     year: 2023,
     type: 'end semester',
@@ -13,7 +13,7 @@ export const mockPYQs: PYQ[] = [
   {
     id: '2',
     title: 'Operating Systems ',
-    subject: 'Operating Systems',
+    subject: '21CSC202J',
     semester: '3',
     year: 2023,
     type: 'end semester',
@@ -22,7 +22,7 @@ export const mockPYQs: PYQ[] = [
   {
     id: '3',
     title: 'Advanced Programming Practice',
-    subject: 'Advanced Programming',
+    subject: '21CSC203P',
     semester: '3',
     year: 2023,
     type: 'ct-2',
@@ -31,7 +31,7 @@ export const mockPYQs: PYQ[] = [
   {
     id: '6',                                
     title: 'Computer Organization and Architecture ',
-    subject: 'Computer Organization and Architecture',                
+    subject: '21CSS201T',                
     semester: '3',                          
     year: 2023,                             
     type: 'ct-all',                  
@@ -39,26 +39,26 @@ export const mockPYQs: PYQ[] = [
   },
   {
     id: '4',
-    title: 'Computer Networks ',
-    subject: 'Computer Networks',
-    semester: '6',
-    year: 2022,
-    type: 'midterm',
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_4'
+    title: 'Introduction To Computational Biology',
+    subject: '21BTB102T',
+    semester: '1',
+    year: 2023,
+    type: 'end semester',
+    downloadUrl: 'https://drive.google.com/drive/folders/1eYPdU8L6Gq2XRyFyULaF_q1KNwycBn72?usp=sharing'
   },
   {
     id: '5',
-    title: 'Software Engineering',
-    subject: 'Software Engineering',
-    semester: '7',
-    year: 2022,
-    type: 'final',
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_5'
+    title: 'Philosophy Of Engineering',
+    subject: 'Philosophy Of Engineering',
+    semester: '1',
+    year: 2023,
+    type: 'Question Bank',
+    downloadUrl: 'https://drive.google.com/file/d/19kaUScD7eNuzqWY951GKrvNpVEmpBeZB/view?usp=sharing'
   },
   {
     id: '7',
     title: 'Calculus and Linear Algebra',
-    subject: 'Calculus and Linear Algebra',
+    subject: '21MAB101T',
     semester: '1',
     year: 2024,
     type: 'CT-1',
@@ -67,7 +67,7 @@ export const mockPYQs: PYQ[] = [
   {
     id: '8',
     title: 'Chemistry',
-    subject: 'Chemistry',
+    subject: '21CYB101J',
     semester: '1',
     year: 2024,
     type: 'CT-1',
@@ -76,7 +76,7 @@ export const mockPYQs: PYQ[] = [
   {
     id: '9',
     title: 'Chemistry',
-    subject: 'Chemistry',
+    subject: '21CYB101J',
     semester: '1',
     year: 2024,
     type: 'CT-2',
@@ -85,7 +85,7 @@ export const mockPYQs: PYQ[] = [
   {
     id: '10',
     title: 'Programming For Problem Solving',
-    subject: 'Programming For Problem Solving',
+    subject: '21CSS101J',
     semester: '1',
     year: 2024,
     type: 'CT-1',
@@ -94,7 +94,7 @@ export const mockPYQs: PYQ[] = [
   {
     id: '11',
     title: 'Advanced Calculus and Complex Analysis',
-    subject: 'Advanced Calculus and Complex Analysis',
+    subject: '21MAB102T',
     semester: '2',
     year: 2024,
     type: 'CT-1',
@@ -103,7 +103,7 @@ export const mockPYQs: PYQ[] = [
   {
     id: '11',
     title: 'Advanced Calculus and Complex Analysis',
-    subject: 'Advanced Calculus and Complex Analysis',
+    subject: '21MAB102T',
     semester: '2',
     year: 2023,
     type: 'endsem PYQ',
@@ -112,7 +112,7 @@ export const mockPYQs: PYQ[] = [
   {
     id: '12',
     title: 'Communicative English',
-    subject: 'Communicaative English',
+    subject: '21LEH101T',
     semester: '2',
     year: 2023,
     type: 'CT Papers',
@@ -121,7 +121,7 @@ export const mockPYQs: PYQ[] = [
   {
     id: '13',
     title: 'Object Oriented Design and Programming',
-    subject: 'Object Oriented Design and Programming',
+    subject: '21CSC101T,
     semester: '2',
     year: 2023,
     type: 'endsem PYQs',
@@ -130,15 +130,21 @@ export const mockPYQs: PYQ[] = [
   {
     id: '14',
     title: 'Electrical and Electronics Engineering',
-    subject: 'Electrical and Electronics Engineering',
+    subject: '21EES101T',
     semester: '2',
     year: 2023,
-    type: 'endsem PYQs',
+    type: 'end semester',
     downloadUrl: 'https://drive.google.com/drive/folders/1Arg4M6W0bgrDqYUOKvK8j46PBpCFHTwU?usp=sharing'
+  },
+  {
+    id: '15',
+    title: 'Semiconductor Physics and Computational Methods',
+    subject: '21EES101T',
+    semester: '2',
+    year: 2023,
+    type: 'end semester',
+    downloadUrl: 'https://drive.google.com/drive/folders/1dVmykmHu9n4C_MEemz9tIM0PEpJG_di1?usp=sharing'
   }
-
-
-
 ];
 
 export const mockNotes: Note[] = [
@@ -192,6 +198,18 @@ export const mockNotes: Note[] = [
     downloadUrl: 'https://drive.google.com/file/d/1_vlBS0mtCu9fM1BQOMz-gvsyIu6ir_uo/view',
     fileSize: '5.0 MB'
   },
+  {
+    id: '6',
+    title: 'Semiconductor Physics all derivations',
+    subject: 'Semiconductor Physics and Computational Methods',
+    semester: '3',
+    uploadedBy: 'Amulya',
+    uploadDate: '2024-10-16',
+    downloadUrl: 'https://drive.google.com/file/d/1auuONnYec4qeDkhGDAnyPjhwg6BZQZ2J/view?usp=sharing',
+    fileSize: '13.7 MB'
+  },
+
+  
 ];
 
 export const mockExams: ExamEvent[] = [
