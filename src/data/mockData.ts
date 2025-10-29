@@ -106,7 +106,7 @@ export const mockPYQs: PYQ[] = [
     subject: 'Advanced Calculus and Complex Analysis',
     semester: '2',
     year: 2023,
-    type: 'endsem PYQ',
+    type: 'end semester',
     downloadUrl: 'https://drive.google.com/drive/folders/1FAFMoEBkJAbRKOyVtdjzK-griu8SW5Ox?usp=sharing'
   },
   {
@@ -124,7 +124,7 @@ export const mockPYQs: PYQ[] = [
     subject: 'Object Oriented Design and Programming',
     semester: '2',
     year: 2023,
-    type: 'endsem PYQs',
+    type: 'end semester',
     downloadUrl: 'https://drive.google.com/drive/folders/1BzF4u9FyVf5Tq-IyeY-IXRTmEmX5tKXT?usp=sharing'
   },
   {
@@ -133,7 +133,7 @@ export const mockPYQs: PYQ[] = [
     subject: 'Electrical and Electronics Engineering',
     semester: '2',
     year: 2023,
-    type: 'endsem PYQs',
+    type: 'end semester',
     downloadUrl: 'https://drive.google.com/drive/folders/1Arg4M6W0bgrDqYUOKvK8j46PBpCFHTwU?usp=sharing'
   }
 
