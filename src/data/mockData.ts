@@ -90,7 +90,53 @@ export const mockPYQs: PYQ[] = [
     year: 2024,
     type: 'CT-1',
     downloadUrl: 'https://drive.google.com/drive/folders/1Br_431Udmj9UFKJ7r5mAZoa3xKkgQNfT?usp=sharing'
+  },
+  {
+    id: '11',
+    title: 'Advanced Calculus and Complex Analysis',
+    subject: 'Advanced Calculus and Complex Analysis',
+    semester: '2',
+    year: 2024,
+    type: 'CT-1',
+    downloadUrl: 'https://drive.google.com/drive/folders/1Cy7coIoxPWkgN_cblEjp1U37H7VOoKAk?usp=sharing'
+  },
+  {
+    id: '11',
+    title: 'Advanced Calculus and Complex Analysis',
+    subject: 'Advanced Calculus and Complex Analysis',
+    semester: '2',
+    year: 2023,
+    type: 'endsem PYQ',
+    downloadUrl: 'https://drive.google.com/drive/folders/1FAFMoEBkJAbRKOyVtdjzK-griu8SW5Ox?usp=sharing'
+  },
+  {
+    id: '12',
+    title: 'Communicative English',
+    subject: 'Communicaative English',
+    semester: '2',
+    year: 2023,
+    type: 'CT Papers',
+    downloadUrl: 'https://drive.google.com/drive/folders/1JKBw4P4UcpDbFXdtzWu9ZNAs-9YqdmpH?usp=sharing'
+  },
+  {
+    id: '13',
+    title: 'Object Oriented Design and Programming',
+    subject: 'Object Oriented Design and Programming',
+    semester: '2',
+    year: 2023,
+    type: 'endsem PYQs',
+    downloadUrl: 'https://drive.google.com/drive/folders/1BzF4u9FyVf5Tq-IyeY-IXRTmEmX5tKXT?usp=sharing'
+  },
+  {
+    id: '14',
+    title: 'Electrical and Electronics Engineering',
+    subject: 'Electrical and Electronics Engineering',
+    semester: '2',
+    year: 2023,
+    type: 'endsem PYQs',
+    downloadUrl: 'https://drive.google.com/drive/folders/1Arg4M6W0bgrDqYUOKvK8j46PBpCFHTwU?usp=sharing'
   }
+
 
 
 ];
