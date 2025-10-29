@@ -156,7 +156,7 @@ export const mockPYQs: PYQ[] = [
     semester: '2',
     year: 2023,
     type: 'end semester',
-    downloadUrl: 'https://drive.google.com/drive/folders/1dVmykmHu9n4C_MEemz9tIM0PEpJG_di1?usp=sharing'
+    downloadUrl: 'https://drive.google.com/drive/folders/1dVmykmHu9n4C_MEemz9tIM0PEpJG_di1?usp=sharing',
     subject: 'Electrical and Electronics Engineering',
     semester: '2',
     year: 2023,
