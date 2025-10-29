@@ -54,7 +54,7 @@ export const mockPYQs: PYQ[] = [
     year: 2022,
     type: 'final',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_5'
-  }
+  },
   {
     id: '7',
     title: 'Calculus and Linear Algebra',
