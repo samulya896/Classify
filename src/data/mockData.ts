@@ -237,6 +237,26 @@ export const mockNotes: Note[] = [
     downloadUrl: 'https://drive.google.com/file/d/1-S-N6nJsmWdKBTMZYekSHYMTUxjmEG-z/view?usp=share_link',
     fileSize: '4.0 MB'
   },
+  {
+    id: '7',
+    title: 'Cell',
+    subject: 'Biology',
+    semester: '1',
+    uploadedBy: 'Daksh',
+    uploadDate: '2024-10-29',
+    downloadUrl: 'https://drive.google.com/drive/folders/10zuIBNexvDR8Kplv1iFLN3rUqIBbf3by?usp=share_link',
+    fileSize: '4.0 MB'
+  },
+  {
+    id: '8',
+    title: 'Electrochemistry',
+    subject: 'Chemistry',
+    semester: '1',
+    uploadedBy: 'Daksh',
+    uploadDate: '2024-10-29',
+    downloadUrl: 'https://drive.google.com/file/d/1p-AvzPT7LiCQ46SoMWLY6SfmNSFjS4js/view?usp=share_link',
+    fileSize: '4.0 MB'
+  },
 ];
 
 export const mockExams: ExamEvent[] = [
