@@ -121,7 +121,7 @@ export const mockPYQs: PYQ[] = [
   {
     id: '13',
     title: 'Object Oriented Design and Programming',
-    subject: '21CSC101T,
+    subject: '21CSC101T',
     semester: '2',
     year: 2023,
     type: 'endsem PYQs',
